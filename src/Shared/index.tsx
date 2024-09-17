@@ -130,8 +130,7 @@ const Contents = {
       "WF-vinyl-floor-repair",
       "WF-Caulking-Bathtub-Shower",
       "WF-Drywallwall-repair",
-      "WF-Wall-repair",
-    ],
+          ],
   },
   PaintingStaining: {
     id: 6,

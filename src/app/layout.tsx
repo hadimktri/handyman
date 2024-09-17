@@ -24,7 +24,7 @@ export default function RootLayout({
             <NavBar />
             <div className={`w-full ${S.flxBC} `}>
               <SideNavBar />
-              {children}
+              {children} 
               <SideBar />
             </div>
           </main>

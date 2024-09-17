@@ -35,8 +35,8 @@ export default function NavBar() {
       initial="hidden"
       whileInView="show"
       className={`${S.flxC} flex-col ${S.gradient} ${
-        scrollDirection === "down" ? "-top-24" : "top-0"
-      } w-full fixed z-50`}
+        scrollDirection === "down" ? "-top-32" : "top-0"
+      } fixed z-50 w-full `}
     >
       <div className={`${S.flxBC} w-11/12 h-[80px] lg:h-[120px]`}>
         <div className={` ${S.flxBC} w-1/3 `}>
@@ -46,7 +46,7 @@ export default function NavBar() {
               onMouseLeave={() => handleLogo(false)}
               className={` ${S.flxBC} cursor-pointer h-[60px]`}
             >
-              <a className="hover:scale-125" href="#Home">
+              <a href="#Home">
                 {logo ? (
                   <TbHomeUp size={25} color="#cbdbc1" className="ml-8" />
                 ) : (
@@ -81,7 +81,7 @@ export default function NavBar() {
                 color="#b2946e"
                 className={`${
                   arrow && "transition ease-in-out translate-y-1"
-                } h-7 w-7 hover:scale-110 `}
+                } h-7 w-7 hover:scale-110`}
               />
             )}
           </div>
@@ -99,7 +99,7 @@ export default function NavBar() {
       <div
         className={`${S.flxC} flex-col sm:flex-row sm:justify-around w-11/12 lg:w-3/4 self-start`}
       >
-        <div className={` ${!open && "hidden"}  sm:h-screen mt-6`}>
+        <div className={` ${!open && "hidden"}  sm:h-screen mt-2`}>
           <h3 className="text-orange-400 font-semibold py-5">
             Home Repair and Maintenance
           </h3>

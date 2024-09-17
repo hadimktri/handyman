@@ -9,14 +9,15 @@ import Carpentry from "./carpentry/page";
 import WallFloor from "./wallfloor/page";
 import Plumbing from "./plumbing/page";
 import Intro from "./intro/page";
+import S from "@/styles";
 
 export default function LetProFixIt() {
   return (
-    <div className="w-full lg:ml-72 lg:mr-20 p-2">
-     <div id="intro">
+    <div className={`${S.flxC} flex-col w-full lg:ml-72 lg:mr-12 p-2 gap-10`}>
+      <div id="intro">
         <Intro />
-      </div> 
-      {/* <div id="plumbing">
+      </div>
+      <div id="plumbing">
         <Plumbing />
       </div>
       <div id="electrician">
@@ -45,7 +46,7 @@ export default function LetProFixIt() {
       </div>
       <div id="carrepair">
         <CarRepair />
-      </div> */}
+      </div>
     </div>
   );
 }
