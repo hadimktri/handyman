@@ -29,7 +29,7 @@ export default function Animate({
       </div>
       <motion.div
         variants={fadeIn("up", "tween", 0.2, 0.8)}
-        className={`${S.innerPadding} w-full lg:w-10/12`}
+        className={`py-8 md:py-16 w-full lg:w-10/12`}
       >
         <div>{children}</div>
       </motion.div>

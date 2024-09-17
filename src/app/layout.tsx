@@ -1,10 +1,10 @@
 import ThemeProvider from "@/utils/ThemeProvide";
+import SideNavBar from "@/component/SideNavBar";
 import SideBar from "@/component/SideBar";
 import NavBar from "@/component/NavBar";
 import type { Metadata } from "next";
 import S from "@/styles";
 import "./globals.css";
-import SideNavBar from "@/component/SideNavBar";
 
 export const metadata: Metadata = {
   title: "Handyman",
@@ -18,14 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${S.primary} h-full w-full tracking-wide`}>
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className={` `}>
+          <main className={`w-full h-full ${S.gradient} ${S.primary}`}>
             <NavBar />
-            <div className={`${S.gradient}`}>
-              <SideBar />
+            <div className={`w-full ${S.flxBC} `}>
               <SideNavBar />
               {children}
+              <SideBar />
             </div>
           </main>
         </ThemeProvider>

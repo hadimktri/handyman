@@ -12,7 +12,7 @@ export default function SideBar() {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="hidden w-24 right-0 fixed lg:flex flex-col justify-end items-center h-full"
+      className="hidden fixed right-0 w-24 lg:flex flex-col justify-end items-center h-screen self-start"
     >
       <h2 className="-rotate-90 tracking-widest">FiND US</h2>
       <div className={`${S.flxC} flex-col mt-32 gap-10`}>

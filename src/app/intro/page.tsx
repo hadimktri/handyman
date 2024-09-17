@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Contents from "@/Shared";
-import { motion } from "framer-motion";
-import S from "@/styles";
 import { slideIn, staggerContainer, textVariant } from "@/utils/motions";
-
+import { motion } from "framer-motion";
+import Contents from "@/Shared";
+import S from "@/styles";
+import { TbPhone } from "react-icons/tb";
 
 export default function Intro() {
   return (
@@ -17,22 +17,28 @@ export default function Intro() {
         viewport={{ once: true, amount: 0.25 }}
         className=" md:mb-24"
       >
-        <motion.h5 variants={textVariant(1.1)} className="text-lg">
-          Hello, I am your Handyman
-        </motion.h5>
+        <motion.h3 variants={textVariant(1.1)} className="text-lg">
+          Hello, I am your Handyman.
+        </motion.h3>
         <motion.h1
           variants={textVariant(1.2)}
-          className={`${S.textGradientAmber} font-extrabold text-5xl md:text-6xl mt-6 w-fit`}
+          className={`${S.textGradientAmber} font-extrabold text-3xl  md:text-6xl mt-6 w-fit`}
         >
           LET PRO FIX IT.
         </motion.h1>
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className={`${S.innerPadding} relative`}
+          className={`py-8 md:py-16 relative`}
         >
-          <h1 className=" text-slate-700 dark:text-slate-200 font-bold text-3xl md:text-4xl">
-            We fix and build things here
+          <h1 className=" text-slate-700 dark:text-slate-200 font-bold text-2xl md:text-4xl">
+            We fix and build things here.
           </h1>
+          <div className={`flex mt-4`}>
+            <TbPhone size={35} color="#cbdbc1" className={`self-end`}/>
+            <h3 className=" text-amber-500 dark:text-amber-300 font-bold text-2xl md:text-4xl">
+              (604)-716-3554
+            </h3>
+          </div>
           <h2 className=" lg:w-2/3 mt-6 md:mt-8">{Contents.INTRO}</h2>
         </motion.div>
       </motion.div>
