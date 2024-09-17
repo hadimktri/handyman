@@ -16,6 +16,8 @@ const Contents = {
     ["painting", "Painting and Staining"],
     ["mounting", "Mountings/Assemblies"],
     ["senior", "Seniors Safety and Mobility"],
+  ],
+  carNavList: [
     ["cardetail", "Car Washing and Detailing"],
     ["carrepair", "Car Repair and Maintenance"],
   ],

@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Contents from "@/Shared";
 import S from "@/styles";
+import { BsTools } from "react-icons/bs";
 
 export default function NavBar() {
   const scrollDirection = useScrollDirection();
@@ -34,25 +35,25 @@ export default function NavBar() {
       initial="hidden"
       whileInView="show"
       className={`${S.flxC} flex-col ${S.gradient} ${
-        scrollDirection === "down" ? "-top-20" : "top-0"
+        scrollDirection === "down" ? "-top-24" : "top-0"
       } w-full fixed z-50`}
     >
-      <div className={`${S.flxBC} w-11/12 h-[80px] `}>
+      <div className={`${S.flxBC} w-11/12 h-[80px] lg:h-[120px]`}>
         <div className={` ${S.flxBC} w-1/3 `}>
-          <div className="w-full">
+          <div className="w-32">
             <div
               onMouseOver={() => handleLogo(true)}
               onMouseLeave={() => handleLogo(false)}
-              className={` ${S.flxBC} cursor-pointer h-[60px] w-full`}
+              className={` ${S.flxBC} cursor-pointer h-[60px]`}
             >
               <a className="hover:scale-125" href="#Home">
                 {logo ? (
-                  <TbHomeUp size={25} color="#cbdbc1"  className="ml-8" />
+                  <TbHomeUp size={25} color="#cbdbc1" className="ml-8" />
                 ) : (
                   <img
-                    src="/Logo-1.png"
+                    src="/Logo.png"
                     alt="Logo"
-                    className="h-[60px] w-[100px] "
+                    className="h-[60px] w-[110px] "
                   />
                 )}
               </a>
@@ -60,14 +61,15 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className={` ${S.flxBC} w-2/3 cursor-pointer`}>
+        <div className={` ${S.flxBC}  w-7/12 sm:w-2/3`}>
           <div
             onClick={handleService}
             onMouseOver={() => setArrow(true)}
             onMouseLeave={() => setArrow(false)}
             className={` ${S.flxBC} cursor-pointer hover:scale-105`}
           >
-            <h2 className="ml-2 font-bold tracking-wide dark:text-[#cbdbc1] text-[#6a7b83] text-lg sm:text-xl">
+            <BsTools size={25} color="#fb923c" className={`hidden sm:flex `} />
+            <h2 className="sm:ml-4 font-bold tracking-wide dark:text-[#cbdbc1] text-[#6a7b83] text-lg sm:text-xl">
               Services
             </h2>
 
@@ -85,7 +87,7 @@ export default function NavBar() {
           </div>
           <div className={`hidden sm:flex `}>
             <TbPhone size={25} color="#cbdbc1" className={``} />
-            <h4 className=" text-amber-500 dark:text-amber-300 font-bold md:text-xl tracking-widest">
+            <h4 className=" text-orange-400 dark:text-orange-400 font-bold md:text-xl tracking-widest">
               : (604)-716-3554
             </h4>
           </div>
@@ -94,24 +96,49 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      <div className={`${S.flxC} w-11/12`}>
-        <ul
-          className={` ${
-            !open && "hidden"
-          } flex flex-col gap-3 font-semibold py-8`}
-        >
-          {Contents.navList.map((nav, idx) => (
-            <li
-              key={idx}
-              onClick={handleService}
-              className="hover:border-b-[1px] hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
-            >
-              <a className="p-2" href={`#${nav[0]}`}>
-                {nav[1]}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div
+        className={`${S.flxC} flex-col sm:flex-row sm:justify-around w-11/12 lg:w-3/4 self-start`}
+      >
+        <div className={` ${!open && "hidden"}  sm:h-screen mt-6`}>
+          <h3 className="text-orange-400 font-semibold py-5">
+            Home Repair and Maintenance
+          </h3>
+          <ul className={`flex flex-col gap-3 font-semibold`}>
+            {Contents.navList.map((nav, idx) => (
+              <li
+                key={idx}
+                onClick={handleService}
+                className="hover:border-b-[1px] hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
+              >
+                <a className="p-2" href={`#${nav[0]}`}>
+                  {nav[1]}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={` ${!open && "hidden"} sm:self-start mb-10 sm:mt-6`}>
+          <h3 className="text-orange-400 font-semibold py-5">
+            Car Repair and Maintenance
+          </h3>
+          <ul
+            className={` ${
+              !open && "hidden"
+            } flex flex-col gap-3 font-semibold `}
+          >
+            {Contents.carNavList.map((nav, idx) => (
+              <li
+                key={idx}
+                onClick={handleService}
+                className="hover:border-b-[1px] hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
+              >
+                <a className="p-2" href={`#${nav[0]}`}>
+                  {nav[1]}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </motion.nav>
   );

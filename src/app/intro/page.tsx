@@ -35,8 +35,8 @@ export default function Intro() {
           </h1>
           <div className={`flex mt-4`}>
             <TbPhone size={35} color="#cbdbc1" className={`self-end`}/>
-            <h3 className=" text-amber-500 dark:text-amber-300 font-bold text-2xl md:text-4xl">
-              (604)-716-3554
+            <h3 className=" text-orange-400 dark:text-orange-400 font-bold text-2xl md:text-4xl">
+              : (604)-716-3554
             </h3>
           </div>
           <h2 className=" lg:w-2/3 mt-6 md:mt-8">{Contents.INTRO}</h2>

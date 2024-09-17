@@ -1,10 +1,11 @@
 "use client";
 9;
 
-import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
+import {  TbBrandLinkedin } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { navVariants } from "@/utils/motions";
 import S from "@/styles";
+import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai";
 
 export default function SideBar() {
   return (
@@ -18,17 +19,17 @@ export default function SideBar() {
       <div className={`${S.flxC} flex-col mt-32 gap-10`}>
         <a
           className=" hover:scale-125"
-          href="https://github.com/hadimktri/"
+          href=""
           target="_blank"
         >
-          <TbBrandGithub size={25} />
+          <AiFillFacebook size={30} />
         </a>
         <a
           className=" hover:scale-125"
-          href="https://www.linkedin.com/in/hadimokhtari/"
+          href=""
           target="_blank"
         >
-          <TbBrandLinkedin size={25} />
+          <AiOutlineInstagram size={30} />
         </a>
         <div className={`${S.flxC} flex-col`}>
           <div className="w-1 h-1 bg-slate-300 rounded-full ml-[0.5px] mb-2" />

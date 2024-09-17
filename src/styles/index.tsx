@@ -9,7 +9,7 @@ const S = {
     "text-transparent bg-clip-text bg-gradient-to-r from-[#847ba1] via-[#dbd6ec] via-[#dbd6ec] to-[#847ba1]",
 
   textGradientAmber:
-    "text-transparent bg-clip-text bg-gradient-to-r from-[#b2946e] via-[#fff7ed] via-[#c026d3] to-[#c084fc]",
+    "text-transparent bg-clip-text bg-gradient-to-r from-[#b45309] via-[#fbbf24] via-[#c026d3] to-[#c084fc]",
 
   primary: "text-zinc-600 dark:text-zinc-300 ",
 
