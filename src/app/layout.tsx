@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className={`w-full h-full ${S.gradient} ${S.primary}`}>
+          <main className={`w-full h-full ${S.gradient} ${S.primary} tracking-wide`}>
             <NavBar />
             <div className={`w-full ${S.flxBC} `}>
               <SideNavBar />

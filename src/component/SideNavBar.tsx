@@ -34,6 +34,19 @@ export default function SideNavBar() {
                 </a>
               </li>
             ))}
+            {Contents.carNavList.map((nav, idx) => (
+              <li
+                key={idx}
+                className="p-2 hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
+              >
+                <a
+                  className="p-2 hover:border-b-[1px] border-slate-600"
+                  href={`#${nav[0]}`}
+                >
+                  {nav[1]}
+                </a>
+              </li>
+            ))}
             <li className="mt-4 hover:scale-125 self-center">
               <a href="#Home">
                 <TbHomeUp size={25} color="#cbdbc1" />
