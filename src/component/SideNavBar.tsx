@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { navVariants } from "@/utils/motions";
-
 import Contents from "@/Shared";
 import S from "@/styles";
 import { TbHomeUp } from "react-icons/tb";
@@ -54,7 +53,6 @@ export default function SideNavBar() {
             </li>
           </ul>
         </div>
-
         <div className="h-[300px] w-5 border-r-[1px] border-slate-700" />
       </div>
     </motion.div>

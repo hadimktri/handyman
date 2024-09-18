@@ -25,7 +25,6 @@ export default function NavBar() {
   };
 
   useEffect(() => {
-    setOpen(false);
     setArrow(false);
   }, [scrollDirection]);
 
@@ -35,34 +34,34 @@ export default function NavBar() {
       initial="hidden"
       whileInView="show"
       className={`${S.flxC} flex-col ${S.gradient} ${
-        scrollDirection === "down" ? "-top-32" : "top-0"
+        scrollDirection === "down" ? "-top-20 sm:-top-28" : "top-0"
       } fixed z-50 w-full `}
     >
       <div className={`${S.flxBC} w-11/12 h-[80px] lg:h-[120px]`}>
         <div className={` ${S.flxBC} w-1/3 `}>
           <div className="w-32">
-            <div
+            <button
               onMouseOver={() => handleLogo(true)}
               onMouseLeave={() => handleLogo(false)}
               className={` ${S.flxBC} cursor-pointer h-[60px]`}
             >
               <a href="#Home">
-                {logo ? (
-                  <TbHomeUp size={25} color="#cbdbc1" className="ml-8" />
-                ) : (
+                {!logo ? (
                   <img
                     src="/Logo.png"
                     alt="Logo"
-                    className="h-[60px] w-[110px] "
+                    className="h-[50px] w-[100px] "
                   />
+                ) : (
+                  <TbHomeUp size={25} color="#cbdbc1" className="ml-8" />
                 )}
               </a>
-            </div>
+            </button>
           </div>
         </div>
 
         <div className={` ${S.flxBC}  w-7/12 sm:w-2/3`}>
-          <div
+          <button
             onClick={handleService}
             onMouseOver={() => setArrow(true)}
             onMouseLeave={() => setArrow(false)}
@@ -84,16 +83,14 @@ export default function NavBar() {
                 } h-7 w-7 hover:scale-110`}
               />
             )}
-          </div>
+          </button>
           <div className={`hidden sm:flex `}>
             <TbPhone size={25} color="#cbdbc1" className={``} />
             <h4 className=" text-orange-400 dark:text-orange-400 font-bold md:text-xl tracking-widest">
               : (604)-716-3554
             </h4>
           </div>
-          <div>
-            <ThemeSwitcher />
-          </div>
+          <ThemeSwitcher />
         </div>
       </div>
       <div

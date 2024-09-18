@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Contents from "@/Shared";
 import S from "@/styles";
 import { TbPhone } from "react-icons/tb";
+import { TypingText } from "@/utils/CustomTexts";
+import Animate from "@/utils/Animate";
 
 export default function Intro() {
   return (
@@ -19,7 +21,10 @@ export default function Intro() {
           className=" md:mb-24 "
         >
           <motion.h3 variants={textVariant(1.1)} className="text-lg">
-            Hello, I am your Handyman.
+            <Animate>
+              <TypingText title={"Hello, I am your Handyman."} />
+            </Animate>
+            {/* Hello, I am your Handyman. */}
           </motion.h3>
           <motion.h1
             variants={textVariant(1.2)}

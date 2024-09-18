@@ -18,18 +18,21 @@ export default function Services({
   images: string[];
 }) {
   return (
-    <div className={`flex flex-col w-full border-t-2 gap-8 py-6 mt-24`}>
+    <div className={`flex flex-col w-full border-t-2 gap-10 py-6 mt-24`}>
       <Animate>
-        <div className={`w-full flex items-center text-2xl font-bold`}>
+        <div className={`w-full flex items-center text-lg font-bold`}>
           <span className={`${S.highLight} text-xl`}>{id}-&nbsp;</span>
           <h2 className={` text-orange-400`}>
-            <TypingText title={title} />
+            <span className="hidden sm:block">
+              <TypingText title={title} />
+            </span>
+            <span className="sm:hidden">{title}</span>
           </h2>
           <div className="hidden sm:block border-b-[1px] border-gray-700 w-32 m-3 mb-1" />
           <div className="hidden sm:block w-1 h-1 bg-[#8b73a5] rounded-full mt-2" />
         </div>
       </Animate>
-      <div className={`${S.flxBC} flex-col sm:flex-row w-full`}>
+      <div className={`${S.flxBC} flex-col sm:flex-row w-full gap-4`}>
         <div className={`w-full sm:w-1/3 self-start`}>
           <Animate>
             <ul className="flex flex-col gap-1">

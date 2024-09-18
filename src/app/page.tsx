@@ -13,7 +13,7 @@ import S from "@/styles";
 
 export default function LetProFixIt() {
   return (
-    <div className={`${S.flxC} flex-col w-full lg:ml-72 lg:mr-16 p-2 gap-10`}>
+    <div className={`${S.flxC} flex-col w-full lg:ml-72 lg:mr-16 p-2  gap-10`}>
       <div id="intro">
         <Intro />
       </div>

@@ -14,7 +14,7 @@ const Contents = {
     ["doorwindow", "Doors and Windows"],
     ["wallfloor", "Wall and Floor"],
     ["painting", "Painting and Staining"],
-    ["mounting", "Mountings/Assemblies"],
+    ["mounting", "Mountings and Assemblies"],
     ["senior", "Seniors Safety and Mobility"],
   ],
   carNavList: [
@@ -163,7 +163,7 @@ const Contents = {
       "Filters Replacement.",
       "Kitchen Appliance.",
       "Showers, Toilet Bars.",
-      "Metal Stairs (wooden to metal conversion).",
+      "Metal Stairs.",
       "Shower glass Door.",
       "Furniture Assembly.",
       "IKEA Furniture.",
