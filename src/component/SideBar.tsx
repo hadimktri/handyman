@@ -11,7 +11,7 @@ export default function SideBar() {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className="hidden fixed right-0 w-18 lg:flex flex-col justify-end items-center h-screen self-start text-orange-500"
+      className={`${S.secondary} hidden fixed right-0 w-18 lg:flex flex-col justify-end items-center h-screen self-start`}
     >
       <h2 className="-rotate-90 tracking-widest">FiND US</h2>
       <div className={`${S.flxC} flex-col mt-32 gap-10`}>
@@ -22,15 +22,11 @@ export default function SideBar() {
         >
           <AiFillFacebook size={30} />
         </a>
-        <a
-          className=" hover:scale-125"
-          href=""
-          target="_blank"
-        >
+        <a className=" hover:scale-125" href="" target="_blank">
           <AiOutlineInstagram size={30} />
         </a>
         <div className={`${S.flxC} flex-col`}>
-          <div className="w-1 h-1 bg-orange-500 rounded-full ml-[0.5px] mb-2" />
+          <div className={`w-1 h-1 rounded-full ml-[0.5px] mb-2`} />
           <div className="h-[100px] border-r-[1px] border-slate-700" />
         </div>
       </div>

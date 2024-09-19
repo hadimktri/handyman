@@ -14,7 +14,7 @@ export const navVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: .5,
+      delay: 0.5,
     },
   },
 };
@@ -58,12 +58,12 @@ export const staggerContainer = (
 
 export const textVariant = (delay: number) => ({
   hidden: {
-    y: 50,
     opacity: 0,
+    y: 50,
   },
   show: {
-    y: 0,
     opacity: 1,
+    y: 0,
     transition: {
       type: "spring",
       duration: 1.25,

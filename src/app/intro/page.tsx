@@ -24,7 +24,6 @@ export default function Intro() {
             <Animate>
               <TypingText title={"Hello, I am your Handyman."} />
             </Animate>
-            {/* Hello, I am your Handyman. */}
           </motion.h3>
           <motion.h1
             variants={textVariant(1.2)}
@@ -32,23 +31,19 @@ export default function Intro() {
           >
             LET PRO FIX IT.
           </motion.h1>
-          <motion.div
-            variants={slideIn("right", "tween", 0.2, 1)}
-            className={`py-8 md:py-16 relative`}
-          >
+          <div className={`py-8 md:py-16 relative`}>
             <h1 className=" text-slate-700 dark:text-slate-200 font-bold text-2xl md:text-4xl">
               We fix and build things here.
             </h1>
             <div className={`flex mt-4`}>
-              <TbPhone size={35} color="#cbdbc1" className={`self-end`} />
-              <h3 className=" text-orange-400 dark:text-orange-400 font-bold text-2xl md:text-4xl">
+              <TbPhone size={35} className={`self-end`} />
+              <h3 className={`${S.secondary} font-bold text-2xl md:text-4xl`}>
                 : (604)-716-3554
               </h3>
             </div>
             <h2 className=" md:w-2/3 mt-6 md:mt-8">{Contents.INTRO}</h2>
-          </motion.div>
+          </div>
         </motion.div>
-        {/* <div id="plumbing" className="h-24" /> */}
       </div>
     </div>
   );

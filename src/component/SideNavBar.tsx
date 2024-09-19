@@ -16,7 +16,7 @@ export default function SideNavBar() {
     >
       <div className={`${S.flxBC} gap-1`}>
         <div className={`flex flex-col gap-2`}>
-          <h2 className="font-bold tracking-wide text-[#cbdbc1] text-xl ml-4 mt-32">
+          <h2 className="font-bold tracking-wide text-xl ml-4 mt-32">
             Services
           </h2>
           <ul className={`flex flex-col gap-1 `}>
@@ -39,7 +39,7 @@ export default function SideNavBar() {
                 className="p-2 hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
               >
                 <a
-                  className="p-2 hover:border-b-[1px] border-slate-600"
+                  className="p-2 hover:border-b-[1px] border-[#334155] dark:border-[#cbd5e1]"
                   href={`#${nav[0]}`}
                 >
                   {nav[1]}

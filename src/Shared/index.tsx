@@ -177,7 +177,7 @@ const Contents = {
       "MA-TV_mounting",
       "MA-Hang_Curtains",
       "MA-hanging blinds",
-      "MA-filter",
+      "MA-Filter",
       "MA-kitchen applience",
       "MA-grab-bars",
       "MA-Metal stairs",

@@ -18,11 +18,11 @@ export default function Services({
   images: string[];
 }) {
   return (
-    <div className={`flex flex-col w-full border-t-2 gap-10 py-6 mt-24`}>
+    <div className={`flex flex-col w-full border-t-[1px] border-slate-700 gap-8 py-6 mt-24`}>
       <Animate>
         <div className={`w-full flex items-center text-lg font-bold`}>
           <span className={`${S.highLight} text-xl`}>{id}-&nbsp;</span>
-          <h2 className={` text-orange-400`}>
+          <h2 className={`${S.secondary}`}>
             <span className="hidden sm:block">
               <TypingText title={title} />
             </span>
