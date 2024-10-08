@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Contents from "@/Shared";
 import S from "@/styles";
 import { BsTools } from "react-icons/bs";
+import Image from "next/image";
 
 export default function NavBar() {
   const scrollDirection = useScrollDirection();
@@ -19,9 +20,16 @@ export default function NavBar() {
   const handleService = () => {
     setOpen((prev) => !prev);
     setArrow(false);
+    setTimeout(() => {
+      setOpen(false);
+    }, 30000);
   };
-  const handleLogo = (el: boolean) => {
-    setLogo(el);
+  const handleLogo = () => {
+    setLogo((prev) => !prev);
+    setTimeout(() => {
+      setLogo(false);
+    }, 750);
+    setOpen(false);
   };
 
   useEffect(() => {
@@ -34,26 +42,28 @@ export default function NavBar() {
       initial="hidden"
       whileInView="show"
       className={`${S.flxC} flex-col ${S.gradient} ${
-        scrollDirection === "down" ? "-top-20 sm:-top-28" : "top-0"
+        scrollDirection === "down" ? "-top-20 sm:-top-36" : "top-0"
       } fixed z-50 w-full `}
     >
-      <div className={`${S.flxBC} w-11/12 h-[80px] lg:h-[120px]`}>
-        <div className={` ${S.flxBC} w-1/3 `}>
-          <div className="w-32">
-            <button
-              onMouseOver={() => handleLogo(true)}
-              onMouseLeave={() => handleLogo(false)}
-              className={` ${S.flxBC} cursor-pointer h-[60px]`}
-            >
+      <div className={`${S.flxBC} w-11/12 h-[95px] md:h-[160px]`}>
+        <div className={` ${S.flxBC} `}>
+          <div
+            onClick={() => handleLogo()}
+            className={` ${S.flxBC} cursor-pointer h-[60px] w-[100px] md:h-[80px] md:w-[130px]`}
+          >
+            <button className="">
               <a href="#Home">
                 {!logo ? (
-                  <img
+                  <Image
                     src="/Logo.png"
                     alt="Logo"
-                    className="h-[50px] w-[100px] "
+                    className="h-[60px] w-[100px] md:h-[75px] md:w-[125px]"             
+                    width={100}
+                    height={60}
+                    priority
                   />
                 ) : (
-                  <TbHomeUp size={25} className="ml-8" />
+                  <TbHomeUp size={40} className="ml-8" />
                 )}
               </a>
             </button>
@@ -67,7 +77,7 @@ export default function NavBar() {
             onMouseLeave={() => setArrow(false)}
             className={` ${S.flxBC} cursor-pointer hover:scale-105`}
           >
-            <BsTools size={25}  className={`hidden sm:flex  ${S.secondary}`} />
+            <BsTools size={25} className={`hidden sm:flex  ${S.secondary}`} />
             <h2 className="sm:ml-4 font-bold tracking-wide text-lg sm:text-xl">
               Services
             </h2>
@@ -77,7 +87,6 @@ export default function NavBar() {
             ) : (
               <RiArrowDropDownLine
                 size={30}
-                
                 className={`${
                   arrow && "transition ease-in-out translate-y-1 "
                 } ${S.secondary} h-7 w-7 hover:scale-110`}
@@ -107,7 +116,7 @@ export default function NavBar() {
               <li
                 key={idx}
                 onClick={handleService}
-                className="hover:border-b-[1px] hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
+                className="hover:border-b-[1px] hover:scale-110 border-slate-500"
               >
                 <a className="p-2" href={`#${nav[0]}`}>
                   {nav[1]}
@@ -117,7 +126,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className={` ${!open && "hidden"} sm:self-start mb-10 sm:mt-6`}>
-          <h3 className={`font-semibold py-5 sm:py-0 ${S.secondary} `}>
+          <h3 className={`font-semibold py-5 sm:pt-0 ${S.secondary} `}>
             Car Repair and Maintenance
           </h3>
           <ul
@@ -129,7 +138,7 @@ export default function NavBar() {
               <li
                 key={idx}
                 onClick={handleService}
-                className="hover:border-b-[1px] hover:scale-110 border-[#334155] dark:border-[#cbd5e1]"
+                className="hover:border-b-[1px] hover:scale-110 border-slate-500"
               >
                 <a className="p-2" href={`#${nav[0]}`}>
                   {nav[1]}

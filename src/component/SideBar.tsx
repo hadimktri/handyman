@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { navVariants } from "@/utils/motions";
 import S from "@/styles";
 import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai";
+import { TbHomeUp } from "react-icons/tb";
 
 export default function SideBar() {
   return (
@@ -15,6 +16,9 @@ export default function SideBar() {
     >
       <h2 className="-rotate-90 tracking-widest">FiND US</h2>
       <div className={`${S.flxC} flex-col mt-32 gap-10`}>
+        <a href="#Home">
+          <TbHomeUp size={30} />
+        </a>
         <a
           className=" hover:scale-125"
           href="https://www.facebook.com/letprofixit"
@@ -27,7 +31,7 @@ export default function SideBar() {
         </a>
         <div className={`${S.flxC} flex-col`}>
           <div className={`w-1 h-1 rounded-full ml-[0.5px] mb-2`} />
-          <div className="h-[100px] border-r-[1px] border-slate-700" />
+          <div className="h-[100px] border-r-[1px] border-slate-500" />
         </div>
       </div>
     </motion.div>
