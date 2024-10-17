@@ -37,10 +37,13 @@ export default function NavBar() {
   }, [scrollDirection]);
 
   return (
-    <nav
+    <motion.nav
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
       className={`${S.flxC} flex-col ${S.gradient} ${
         scrollDirection === "down" ? "-top-20 sm:-top-36" : "top-0"
-      } fixed z-50 w-full scroll-smooth`}
+      } fixed z-50 w-full `}
     >
       <div className={`${S.flxBC} w-11/12 h-[95px] md:h-[160px]`}>
         <div className={` ${S.flxBC} `}>
@@ -54,7 +57,7 @@ export default function NavBar() {
                   <Image
                     src="/Logo.png"
                     alt="Logo"
-                    className="h-[60px] w-[100px] md:h-[75px] md:w-[125px]"
+                    className="h-[60px] w-[100px] md:h-[75px] md:w-[125px]"             
                     width={100}
                     height={60}
                     priority
@@ -145,6 +148,6 @@ export default function NavBar() {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
