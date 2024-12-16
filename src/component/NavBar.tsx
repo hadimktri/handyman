@@ -4,14 +4,11 @@ import useScrollDirection from "@/hooks/useScrollDirection";
 import ThemeSwitcher from "@/component/ThemeSwitcher";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TbHomeUp, TbPhone, TbX } from "react-icons/tb";
-import { navVariants } from "../utils/motions";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Contents from "@/Shared";
 import S from "@/styles";
 import { BsTools } from "react-icons/bs";
-import Image from "next/image";
-
+import { div } from "framer-motion/client";
 export default function NavBar() {
   const scrollDirection = useScrollDirection();
   const [arrow, setArrow] = useState(false);
@@ -51,14 +48,14 @@ export default function NavBar() {
             <button className="">
               <a href="#Home">
                 {!logo ? (
-                  <Image
-                    src="/Logo.png"
-                    alt="Logo"
-                    className="h-[60px] w-[100px] md:h-[75px] md:w-[125px]"
-                    width={100}
-                    height={60}
-                    priority
-                  />
+                  <div>
+                    <p className={`font-extrabold text-3xl md:text-5xl w-fit`}>
+                      TDH
+                    </p>
+                    <p className={`ml-9 font-bold text-sm md:text-xl w-fit`}>
+                      service
+                    </p>
+                  </div>
                 ) : (
                   <TbHomeUp size={40} className="ml-8" />
                 )}

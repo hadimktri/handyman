@@ -124,12 +124,14 @@ const Contents = {
       "Bathroom Caulking.",
       "Vinyl & Laminate Floor.",
       "Drywall.",
+      "Bathtub Surrounds.",
     ],
     images: [
       "WF-Laminate-Floor-Repair",
       "WF-vinyl-floor-repair",
       "WF-Caulking-Bathtub-Shower",
       "WF-Drywallwall-repair",
+      "WF-Wall-Bathtub Surrounds",
           ],
   },
   PaintingStaining: {
