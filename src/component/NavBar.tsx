@@ -52,7 +52,9 @@ export default function NavBar() {
                     <p className={`font-extrabold text-3xl md:text-5xl w-fit`}>
                       TDH
                     </p>
-                    <p className={`ml-9 font-bold text-sm md:text-xl w-fit`}>
+                    <p
+                      className={`ml-5 md:ml-9 font-bold text-sm md:text-xl w-fit`}
+                    >
                       service
                     </p>
                   </div>
